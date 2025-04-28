@@ -1,0 +1,357 @@
+2025-04-06T18:07:08.767884Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-06T18:07:09.505420Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-06T18:07:09.505458Z [-] Twisted Version 24.11.0
+2025-04-06T18:07:09.505468Z [-] Cowrie Version 2.6.1
+2025-04-06T18:07:09.510075Z [-] Loaded output engine: jsonlog
+2025-04-06T18:07:09.511404Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-06T18:07:09.511492Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-06T18:07:09.545914Z [-] CowrieSSHFactory starting on 22
+2025-04-06T18:07:09.549987Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7fb4308a6610>
+2025-04-06T18:07:09.646232Z [-] Ready to accept SSH connections
+2025-04-06T18:07:09.653594Z [-] HoneyPotTelnetFactory starting on 23
+2025-04-06T18:07:09.653950Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7fb430fa7d90>
+2025-04-06T18:07:09.654573Z [-] Ready to accept Telnet connections
+2025-04-06T18:07:16.532463Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.192:53445 (192.168.0.100:22) [session: c34062467dba]
+2025-04-06T18:07:16.533524Z [HoneyPotSSHTransport,0,192.168.0.192] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-06T18:07:16.536494Z [HoneyPotSSHTransport,0,192.168.0.192] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-06T18:07:16.537291Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-06T18:07:16.537349Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:07:16.537392Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:07:18.438541Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-06T18:07:18.445253Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-06T18:07:18.447328Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-06T18:07:18.450841Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-06T18:07:18.451435Z [HoneyPotSSHTransport,0,192.168.0.192] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-06T18:07:18.451916Z [HoneyPotSSHTransport,0,192.168.0.192] public key login attempt for [b'mozna'] failed
+2025-04-06T18:07:18.452322Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-06T18:07:18.452456Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-06T18:07:19.835974Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:07:19.838358Z [HoneyPotSSHTransport,0,192.168.0.192] Failed login - wrong password for 'mozna'
+2025-04-06T18:07:19.838517Z [HoneyPotSSHTransport,0,192.168.0.192] login attempt [b'mozna'/b'laska'] failed
+2025-04-06T18:07:21.130294Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'password'
+2025-04-06T18:07:21.130455Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] unauthorized login: ()
+2025-04-06T18:07:22.749887Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:07:22.750324Z [HoneyPotSSHTransport,0,192.168.0.192] Successful login for locked user 'mozna'
+2025-04-06T18:07:22.750446Z [HoneyPotSSHTransport,0,192.168.0.192] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-06T18:07:22.750832Z [HoneyPotSSHTransport,0,192.168.0.192] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-06T18:07:22.754308Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-06T18:07:22.754553Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-06T18:07:22.757054Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-06T18:07:22.757643Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-06T18:07:22.757911Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-06T18:07:22.857939Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (30, 58, 640, 480)
+2025-04-06T18:07:22.858082Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,192.168.0.192] Terminal Size: 58 30
+2025-04-06T18:07:22.858532Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-06T18:07:25.034936Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: ls
+2025-04-06T18:07:25.035327Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: ls 
+2025-04-06T18:07:27.376784Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cd ..
+2025-04-06T18:07:27.377264Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cd ..
+2025-04-06T18:07:27.843727Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: ls
+2025-04-06T18:07:27.844163Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: ls 
+2025-04-06T18:07:30.843034Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cd ..
+2025-04-06T18:07:30.844481Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cd ..
+2025-04-06T18:07:31.512829Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: ls
+2025-04-06T18:07:31.513216Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: ls 
+2025-04-06T18:07:35.077358Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: nano 
+2025-04-06T18:07:35.081595Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: nano 
+2025-04-06T18:07:35.081966Z [HoneyPotSSHTransport,0,192.168.0.192] Reading txtcmd from "src/cowrie/data/txtcmds/usr/bin/nano"
+2025-04-06T18:07:43.097769Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cd etc
+2025-04-06T18:07:43.098159Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cd etc
+2025-04-06T18:07:43.609671Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: ls
+2025-04-06T18:07:43.610566Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: ls 
+2025-04-06T18:07:49.941441Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cat passwd
+2025-04-06T18:07:49.941825Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cat passwd
+2025-04-06T18:07:58.255154Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: nano group
+2025-04-06T18:07:58.256012Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: nano group
+2025-04-06T18:07:58.256165Z [HoneyPotSSHTransport,0,192.168.0.192] Reading txtcmd from "src/cowrie/data/txtcmds/usr/bin/nano"
+2025-04-06T18:08:00.140646Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: nano groups
+2025-04-06T18:08:00.141201Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: nano groups
+2025-04-06T18:08:00.141460Z [HoneyPotSSHTransport,0,192.168.0.192] Reading txtcmd from "src/cowrie/data/txtcmds/usr/bin/nano"
+2025-04-06T18:08:22.438235Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cat passwd
+2025-04-06T18:08:22.438791Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cat passwd
+2025-04-06T18:08:34.132662Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > passwd
+2025-04-06T18:08:34.133078Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:08:44.772483Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > passwd
+2025-04-06T18:08:44.773543Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:08:50.999872Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: rm passwd
+2025-04-06T18:08:51.001125Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: rm passwd
+2025-04-06T18:08:52.299874Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: ls
+2025-04-06T18:08:52.300255Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: ls 
+2025-04-06T18:08:56.696645Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cat passwd
+2025-04-06T18:08:56.697028Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cat passwd
+2025-04-06T18:09:40.441835Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo ls
+2025-04-06T18:09:40.442505Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: echo ls
+2025-04-06T18:09:49.526186Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > fero
+2025-04-06T18:09:49.527003Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:09:52.520985Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > fero.txt
+2025-04-06T18:09:52.521404Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:10:09.610078Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > groups
+2025-04-06T18:10:09.610478Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:10:11.357456Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > group
+2025-04-06T18:10:11.357855Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:10:13.862993Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cat group
+2025-04-06T18:10:13.863376Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cat group
+2025-04-06T18:10:24.299896Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: touch group
+2025-04-06T18:10:24.300292Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: touch group
+2025-04-06T18:10:27.403449Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: cat group
+2025-04-06T18:10:27.403960Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: cat group
+2025-04-06T18:11:02.430488Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: clear
+2025-04-06T18:11:02.430868Z [HoneyPotSSHTransport,0,192.168.0.192] Command found: clear 
+2025-04-06T18:11:06.230552Z [HoneyPotSSHTransport,0,192.168.0.192] CMD: echo "" > groups
+2025-04-06T18:11:06.231620Z [HoneyPotSSHTransport,0,192.168.0.192] exception: string index out of range
+2025-04-06T18:12:22.897976Z [-] Timeout reached in HoneyPotSSHTransport
+2025-04-06T18:12:22.900432Z [HoneyPotSSHTransport,0,192.168.0.192] Closing TTY Log: var/lib/cowrie/tty/05ed61faf439a037c6eeefa14fa06fad10ea224cae817e9ccab42b7be30c9122 after 300.0 seconds
+2025-04-06T18:12:22.901561Z [HoneyPotSSHTransport,0,192.168.0.192] avatar mozna logging out
+2025-04-06T18:12:22.901660Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-06T18:12:22.901747Z [HoneyPotSSHTransport,0,192.168.0.192] Connection lost after 306.4 seconds
+2025-04-06T18:12:53.562998Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.192:53873 (192.168.0.100:22) [session: c7109c941a94]
+2025-04-06T18:12:53.563745Z [HoneyPotSSHTransport,1,192.168.0.192] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-06T18:12:53.568891Z [HoneyPotSSHTransport,1,192.168.0.192] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-06T18:12:53.569952Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-06T18:12:53.570058Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:12:53.570143Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:12:53.623311Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-06T18:12:53.625221Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-06T18:12:53.626511Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-06T18:12:53.627382Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-06T18:12:53.627769Z [HoneyPotSSHTransport,1,192.168.0.192] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-06T18:12:53.628191Z [HoneyPotSSHTransport,1,192.168.0.192] public key login attempt for [b'mozna'] failed
+2025-04-06T18:12:53.628535Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-06T18:12:53.628636Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-06T18:12:56.563006Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:12:56.563429Z [HoneyPotSSHTransport,1,192.168.0.192] Successful login for locked user 'mozna'
+2025-04-06T18:12:56.563493Z [HoneyPotSSHTransport,1,192.168.0.192] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-06T18:12:56.563816Z [HoneyPotSSHTransport,1,192.168.0.192] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-06T18:12:56.564153Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-06T18:12:56.564308Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-06T18:12:56.566608Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-06T18:12:56.566807Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-06T18:12:56.566872Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-06T18:12:56.626251Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (30, 58, 640, 480)
+2025-04-06T18:12:56.626395Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,1,192.168.0.192] Terminal Size: 58 30
+2025-04-06T18:12:56.626813Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-06T18:12:58.595653Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cd ..
+2025-04-06T18:12:58.596055Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cd ..
+2025-04-06T18:12:59.402073Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cd ..
+2025-04-06T18:12:59.402452Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cd ..
+2025-04-06T18:13:01.160252Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cd etc
+2025-04-06T18:13:01.160633Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cd etc
+2025-04-06T18:13:01.746269Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: ls
+2025-04-06T18:13:01.746927Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: ls 
+2025-04-06T18:13:04.621280Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cat passwd
+2025-04-06T18:13:04.621717Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cat passwd
+2025-04-06T18:13:07.393022Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cat group
+2025-04-06T18:13:07.393392Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cat group
+2025-04-06T18:13:12.174123Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cat group
+2025-04-06T18:13:12.174484Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cat group
+2025-04-06T18:13:15.666460Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cat group
+2025-04-06T18:13:15.667145Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cat group
+2025-04-06T18:13:23.810555Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: cat group
+2025-04-06T18:13:23.810980Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: cat group
+2025-04-06T18:13:25.119040Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: clear
+2025-04-06T18:13:25.119861Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: clear 
+2025-04-06T18:13:25.807103Z [HoneyPotSSHTransport,1,192.168.0.192] CMD: exit
+2025-04-06T18:13:25.807461Z [HoneyPotSSHTransport,1,192.168.0.192] Command found: exit 
+2025-04-06T18:13:25.807600Z [twisted.conch.ssh.session#info] exitCode: 0
+2025-04-06T18:13:25.807656Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2025-04-06T18:13:25.808052Z [HoneyPotSSHTransport,1,192.168.0.192] Closing TTY Log: var/lib/cowrie/tty/e0379a2ad63c83d30f2060b5f6e416e20e7ad2518e36c17acdae803138fd8c5c after 29.2 seconds
+2025-04-06T18:13:25.808482Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2025-04-06T18:13:25.826007Z [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2025-04-06T18:13:25.826285Z [HoneyPotSSHTransport,1,192.168.0.192] Got remote error, code 11 reason: b'disconnected by user'
+2025-04-06T18:13:25.826663Z [HoneyPotSSHTransport,1,192.168.0.192] avatar mozna logging out
+2025-04-06T18:13:25.826782Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-06T18:13:25.826840Z [HoneyPotSSHTransport,1,192.168.0.192] Connection lost after 32.3 seconds
+2025-04-06T18:16:37.579266Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.192:54146 (192.168.0.100:22) [session: 897183df1115]
+2025-04-06T18:16:37.581229Z [HoneyPotSSHTransport,2,192.168.0.192] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-06T18:16:37.583287Z [HoneyPotSSHTransport,2,192.168.0.192] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-06T18:16:37.584169Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-06T18:16:37.584269Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:16:37.584313Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:16:37.790604Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-06T18:16:37.791438Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-06T18:16:37.792160Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-06T18:16:37.794004Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-06T18:16:37.794505Z [HoneyPotSSHTransport,2,192.168.0.192] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-06T18:16:37.794983Z [HoneyPotSSHTransport,2,192.168.0.192] public key login attempt for [b'mozna'] failed
+2025-04-06T18:16:37.795365Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-06T18:16:37.795431Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-06T18:16:40.765025Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:16:40.765425Z [HoneyPotSSHTransport,2,192.168.0.192] Successful login for locked user 'mozna'
+2025-04-06T18:16:40.765485Z [HoneyPotSSHTransport,2,192.168.0.192] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-06T18:16:40.765812Z [HoneyPotSSHTransport,2,192.168.0.192] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-06T18:16:40.766142Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-06T18:16:40.766278Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-06T18:16:40.768399Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-06T18:16:40.768582Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-06T18:16:40.768644Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-06T18:16:40.840876Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (30, 58, 640, 480)
+2025-04-06T18:16:40.841028Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,2,192.168.0.192] Terminal Size: 58 30
+2025-04-06T18:16:40.841452Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-06T18:16:42.676783Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "test" >> /proc/fakefile
+2025-04-06T18:16:42.677938Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo test >> /proc/fakefile
+2025-04-06T18:16:49.005114Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "test" >> /fakefile
+2025-04-06T18:16:49.005541Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo test >> /fakefile
+2025-04-06T18:16:50.427635Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: ls
+2025-04-06T18:16:50.428123Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: ls 
+2025-04-06T18:16:51.980510Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cd ..
+2025-04-06T18:16:51.980881Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cd ..
+2025-04-06T18:16:52.441892Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: ls
+2025-04-06T18:16:52.442776Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: ls 
+2025-04-06T18:16:56.462437Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cd ..
+2025-04-06T18:16:56.462803Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cd ..
+2025-04-06T18:16:56.859185Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: ls
+2025-04-06T18:16:56.859549Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: ls 
+2025-04-06T18:17:02.261662Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cat fakefile
+2025-04-06T18:17:02.262029Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cat fakefile
+2025-04-06T18:17:50.394845Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "test" >> /etc/passwd
+2025-04-06T18:17:50.395921Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo test >> /etc/passwd
+2025-04-06T18:17:54.629913Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cd etc
+2025-04-06T18:17:54.630804Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cd etc
+2025-04-06T18:17:56.823717Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cat passwd
+2025-04-06T18:17:56.824214Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cat passwd
+2025-04-06T18:18:04.408151Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "test" >> passwd
+2025-04-06T18:18:04.408530Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo test >> passwd
+2025-04-06T18:18:09.504985Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "tssest" >> passwd
+2025-04-06T18:18:09.505388Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo tssest >> passwd
+2025-04-06T18:18:12.592760Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "tssest" > passwd
+2025-04-06T18:18:12.593143Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo tssest > passwd
+2025-04-06T18:18:16.721431Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "tsset" > passwd
+2025-04-06T18:18:16.721855Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo tsset > passwd
+2025-04-06T18:18:18.900900Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cat passwd
+2025-04-06T18:18:18.901632Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cat passwd
+2025-04-06T18:18:20.603242Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: ls
+2025-04-06T18:18:20.603644Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: ls 
+2025-04-06T18:18:23.978064Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cat group
+2025-04-06T18:18:23.979517Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cat group
+2025-04-06T18:19:21.503140Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: echo "test" > nef
+2025-04-06T18:19:21.503525Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: echo test > nef
+2025-04-06T18:19:23.284422Z [HoneyPotSSHTransport,2,192.168.0.192] CMD: cat nef
+2025-04-06T18:19:23.285450Z [HoneyPotSSHTransport,2,192.168.0.192] Command found: cat nef
+2025-04-06T18:21:41.155536Z [-] Timeout reached in HoneyPotSSHTransport
+2025-04-06T18:21:41.158232Z [HoneyPotSSHTransport,2,192.168.0.192] Saved redir contents with SHA-256 d1e3b6e2e29571bb5cfeaaa49a0c5a84289fee2b90f9708b27a981543a1ce22f to var/lib/cowrie/downloads/d1e3b6e2e29571bb5cfeaaa49a0c5a84289fee2b90f9708b27a981543a1ce22f
+2025-04-06T18:21:41.158876Z [HoneyPotSSHTransport,2,192.168.0.192] Saved redir contents with SHA-256 eaf0f4ca6600f0ae9d4c581ba973c40ddd04e234dffe24d9eb53e24e6b131f4a to var/lib/cowrie/downloads/eaf0f4ca6600f0ae9d4c581ba973c40ddd04e234dffe24d9eb53e24e6b131f4a
+2025-04-06T18:21:41.159291Z [HoneyPotSSHTransport,2,192.168.0.192] Saved redir contents with SHA-256 f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2 to var/lib/cowrie/downloads/f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2
+2025-04-06T18:21:41.159786Z [HoneyPotSSHTransport,2,192.168.0.192] Saved redir contents with SHA-256 f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2 to var/lib/cowrie/downloads/f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2
+2025-04-06T18:21:41.160149Z [HoneyPotSSHTransport,2,192.168.0.192] Saved redir contents with SHA-256 39f50e8e4ca873d90744e17e4540823d5a317f56397e2dc4a1ae3c6e9c8398ac to var/lib/cowrie/downloads/39f50e8e4ca873d90744e17e4540823d5a317f56397e2dc4a1ae3c6e9c8398ac
+2025-04-06T18:21:41.160933Z [HoneyPotSSHTransport,2,192.168.0.192] Closing TTY Log: var/lib/cowrie/tty/ea8ec0b8e7c43860395c5d50ae9566646e8b9865b11686d3c00229365f521a26 after 300.3 seconds
+2025-04-06T18:21:41.161414Z [HoneyPotSSHTransport,2,192.168.0.192] avatar mozna logging out
+2025-04-06T18:21:41.161526Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-06T18:21:41.161582Z [HoneyPotSSHTransport,2,192.168.0.192] Connection lost after 303.6 seconds
+2025-04-06T18:23:10.730202Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.192:54594 (192.168.0.100:22) [session: 22f56bb60b5e]
+2025-04-06T18:23:10.730780Z [HoneyPotSSHTransport,3,192.168.0.192] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-06T18:23:10.733536Z [HoneyPotSSHTransport,3,192.168.0.192] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-06T18:23:10.734344Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-06T18:23:10.734396Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:23:10.734435Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:23:10.799012Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-06T18:23:10.800377Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-06T18:23:10.801470Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-06T18:23:10.802971Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-06T18:23:10.803345Z [HoneyPotSSHTransport,3,192.168.0.192] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-06T18:23:10.803781Z [HoneyPotSSHTransport,3,192.168.0.192] public key login attempt for [b'mozna'] failed
+2025-04-06T18:23:10.804129Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-06T18:23:10.804185Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-06T18:23:13.244444Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:23:13.244885Z [HoneyPotSSHTransport,3,192.168.0.192] Successful login for locked user 'mozna'
+2025-04-06T18:23:13.244970Z [HoneyPotSSHTransport,3,192.168.0.192] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-06T18:23:13.245739Z [HoneyPotSSHTransport,3,192.168.0.192] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-06T18:23:13.246290Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-06T18:23:13.246604Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-06T18:23:13.248725Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-06T18:23:13.248987Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-06T18:23:13.249059Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-06T18:23:13.270513Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (30, 58, 640, 480)
+2025-04-06T18:23:13.270688Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,3,192.168.0.192] Terminal Size: 58 30
+2025-04-06T18:23:13.271235Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-06T18:23:17.146936Z [HoneyPotSSHTransport,3,192.168.0.192] CMD: touch ferogaspar
+2025-04-06T18:23:17.147523Z [HoneyPotSSHTransport,3,192.168.0.192] Command found: touch ferogaspar
+2025-04-06T18:24:02.967322Z [HoneyPotSSHTransport,3,192.168.0.192] CMD: echo "asd" >> as
+2025-04-06T18:24:02.968246Z [HoneyPotSSHTransport,3,192.168.0.192] Command found: echo asd >> as
+2025-04-06T18:24:49.638187Z [HoneyPotSSHTransport,3,192.168.0.192] CMD: exit
+2025-04-06T18:24:49.639151Z [HoneyPotSSHTransport,3,192.168.0.192] Command found: exit 
+2025-04-06T18:24:49.639425Z [twisted.conch.ssh.session#info] exitCode: 0
+2025-04-06T18:24:49.639483Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2025-04-06T18:24:49.639681Z [HoneyPotSSHTransport,3,192.168.0.192] Saved redir contents with SHA-256 dc460da4ad72c482231e28e688e01f2778a88ce31a08826899d54ef7183998b5 to var/lib/cowrie/downloads/dc460da4ad72c482231e28e688e01f2778a88ce31a08826899d54ef7183998b5
+2025-04-06T18:24:49.640144Z [HoneyPotSSHTransport,3,192.168.0.192] Closing TTY Log: var/lib/cowrie/tty/cf89ef5886a279056b05561d26960f94ae3bc2fc0ea7c64d625c7a126ef62ded after 96.4 seconds
+2025-04-06T18:24:49.640470Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2025-04-06T18:24:49.644197Z [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2025-04-06T18:24:49.644408Z [HoneyPotSSHTransport,3,192.168.0.192] Got remote error, code 11 reason: b'disconnected by user'
+2025-04-06T18:24:49.644660Z [HoneyPotSSHTransport,3,192.168.0.192] avatar mozna logging out
+2025-04-06T18:24:49.644739Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-06T18:24:49.644786Z [HoneyPotSSHTransport,3,192.168.0.192] Connection lost after 98.9 seconds
+2025-04-06T18:37:53.184175Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 192.168.0.192:55392 (192.168.0.100:22) [session: 98445059d8da]
+2025-04-06T18:37:53.185143Z [HoneyPotSSHTransport,4,192.168.0.192] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-06T18:37:53.188836Z [HoneyPotSSHTransport,4,192.168.0.192] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-06T18:37:53.189825Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-06T18:37:53.189897Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:37:53.189941Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-06T18:37:53.240157Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-06T18:37:53.244920Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-06T18:37:53.246016Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-06T18:37:53.247460Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-06T18:37:53.247912Z [HoneyPotSSHTransport,4,192.168.0.192] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-06T18:37:53.248314Z [HoneyPotSSHTransport,4,192.168.0.192] public key login attempt for [b'mozna'] failed
+2025-04-06T18:37:53.248670Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-06T18:37:53.248725Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-06T18:37:55.667587Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-06T18:37:55.668098Z [HoneyPotSSHTransport,4,192.168.0.192] Successful login for locked user 'mozna'
+2025-04-06T18:37:55.668201Z [HoneyPotSSHTransport,4,192.168.0.192] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-06T18:37:55.668508Z [HoneyPotSSHTransport,4,192.168.0.192] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-06T18:37:55.669187Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-06T18:37:55.669373Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-06T18:37:55.672082Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-06T18:37:55.672323Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-06T18:37:55.672387Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-06T18:37:55.762001Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (30, 77, 640, 480)
+2025-04-06T18:37:55.762171Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,4,192.168.0.192] Terminal Size: 77 30
+2025-04-06T18:37:55.762649Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-06T18:37:56.188869Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: ls
+2025-04-06T18:37:56.189256Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: ls 
+2025-04-06T18:37:56.813833Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: clear
+2025-04-06T18:37:56.814229Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: clear 
+2025-04-06T18:37:58.242025Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cd ..
+2025-04-06T18:37:58.242416Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cd ..
+2025-04-06T18:37:59.986060Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cd ..
+2025-04-06T18:37:59.986666Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cd ..
+2025-04-06T18:38:01.331596Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cd etc
+2025-04-06T18:38:01.331974Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cd etc
+2025-04-06T18:38:03.430038Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: ls
+2025-04-06T18:38:03.430400Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: ls 
+2025-04-06T18:38:19.369002Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: echo "fero" >> passwd 
+2025-04-06T18:38:19.369385Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: echo fero >> passwd
+2025-04-06T18:38:23.631927Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat passwd
+2025-04-06T18:38:23.632537Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat passwd
+2025-04-06T18:38:30.397640Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: echo "fero" > groups 
+2025-04-06T18:38:30.398408Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: echo fero > groups
+2025-04-06T18:38:33.376137Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat groups
+2025-04-06T18:38:33.376625Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat groups
+2025-04-06T18:39:24.230081Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: echo "ryba" >> passwd
+2025-04-06T18:39:24.230463Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: echo ryba >> passwd
+2025-04-06T18:39:26.906671Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat passwd
+2025-04-06T18:39:26.907044Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat passwd
+2025-04-06T18:39:33.977246Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat rmt
+2025-04-06T18:39:33.977618Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat rmt
+2025-04-06T18:39:38.132720Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat ssh
+2025-04-06T18:39:38.133528Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat ssh
+2025-04-06T18:39:42.952358Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: ls -a
+2025-04-06T18:39:42.952733Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: ls -a
+2025-04-06T18:39:45.552281Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: ls -l
+2025-04-06T18:39:45.552655Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: ls -l
+2025-04-06T18:39:51.686755Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: clear
+2025-04-06T18:39:51.687131Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: clear 
+2025-04-06T18:39:52.053078Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: ls
+2025-04-06T18:39:52.053439Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: ls 
+2025-04-06T18:39:56.529971Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat motd
+2025-04-06T18:39:56.530418Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat motd
+2025-04-06T18:40:08.638197Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: echo "ryba" >> motd
+2025-04-06T18:40:08.638579Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: echo ryba >> motd
+2025-04-06T18:40:10.519509Z [HoneyPotSSHTransport,4,192.168.0.192] CMD: cat motd
+2025-04-06T18:40:10.519881Z [HoneyPotSSHTransport,4,192.168.0.192] Command found: cat motd
+2025-04-06T18:42:55.922514Z [-] Timeout reached in HoneyPotSSHTransport
+2025-04-06T18:42:55.926157Z [HoneyPotSSHTransport,4,192.168.0.192] Saved redir contents with SHA-256 4c4857c1d0a744129409d4fbde5ba972d5f2833b6a5aa9b7d75c8e69f6a0a814 to var/lib/cowrie/downloads/4c4857c1d0a744129409d4fbde5ba972d5f2833b6a5aa9b7d75c8e69f6a0a814
+2025-04-06T18:42:55.927327Z [HoneyPotSSHTransport,4,192.168.0.192] Saved redir contents with SHA-256 86a5dddcc98642743db1fb0ab5c339a7d774e7827679526e3ac20c4b5406c9a8 to var/lib/cowrie/downloads/86a5dddcc98642743db1fb0ab5c339a7d774e7827679526e3ac20c4b5406c9a8
+2025-04-06T18:42:55.927790Z [HoneyPotSSHTransport,4,192.168.0.192] Saved redir contents with SHA-256 3d26144407be0a942f14c09cb1a896a0fd678c9242187b501aeabf694d2c5652 to var/lib/cowrie/downloads/3d26144407be0a942f14c09cb1a896a0fd678c9242187b501aeabf694d2c5652
+2025-04-06T18:42:55.929136Z [HoneyPotSSHTransport,4,192.168.0.192] Closing TTY Log: var/lib/cowrie/tty/a5c66cfccd2e61e8d5f9753a8364e0bc2098412ffae1e7f08394b91bcca3312c after 300.2 seconds
+2025-04-06T18:42:55.929837Z [HoneyPotSSHTransport,4,192.168.0.192] avatar mozna logging out
+2025-04-06T18:42:55.929978Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-06T18:42:55.930050Z [HoneyPotSSHTransport,4,192.168.0.192] Connection lost after 302.7 seconds

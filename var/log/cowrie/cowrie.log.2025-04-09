@@ -1,0 +1,88 @@
+2025-04-09T05:17:51.831579Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-09T05:17:52.215044Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-09T05:17:52.215077Z [-] Twisted Version 24.11.0
+2025-04-09T05:17:52.215086Z [-] Cowrie Version 2.6.1
+2025-04-09T05:17:52.216793Z [-] Loaded output engine: jsonlog
+2025-04-09T05:17:52.220092Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-09T05:17:52.220259Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-09T05:17:52.238001Z [-] CowrieSSHFactory starting on 22
+2025-04-09T05:17:52.239219Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f8ffcc37450>
+2025-04-09T05:17:52.313335Z [-] Ready to accept SSH connections
+2025-04-09T05:17:52.322124Z [-] HoneyPotTelnetFactory starting on 23
+2025-04-09T05:17:52.322444Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f8ffcc37690>
+2025-04-09T05:17:52.323696Z [-] Ready to accept Telnet connections
+2025-04-09T05:18:00.394195Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 10.10.23.27:54198 (10.10.18.35:22) [session: 1ed773e70343]
+2025-04-09T05:18:00.405619Z [HoneyPotSSHTransport,0,10.10.23.27] Remote SSH version: SSH-2.0-OpenSSH_for_Windows_9.5
+2025-04-09T05:18:00.423498Z [HoneyPotSSHTransport,0,10.10.23.27] SSH client hassh fingerprint: 701158e75b508e76f0410d5d22ef9df0
+2025-04-09T05:18:00.424456Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-04-09T05:18:00.424650Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-09T05:18:00.424699Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-04-09T05:18:00.433522Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-04-09T05:18:00.435090Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-04-09T05:18:00.436785Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'none'
+2025-04-09T05:18:00.438761Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'publickey'
+2025-04-09T05:18:00.440206Z [HoneyPotSSHTransport,0,10.10.23.27] public key attempt for user b'mozna' of type b'ssh-ed25519' with fingerprint e6:e9:6f:01:a5:6f:ac:b5:71:13:b7:dd:3c:7e:11:4a
+2025-04-09T05:18:00.440720Z [HoneyPotSSHTransport,0,10.10.23.27] public key login attempt for [b'mozna'] failed
+2025-04-09T05:18:00.441101Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' failed auth b'publickey'
+2025-04-09T05:18:00.441200Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] reason: ('Incorrect signature', None)
+2025-04-09T05:18:03.003562Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' trying auth b'password'
+2025-04-09T05:18:03.005968Z [HoneyPotSSHTransport,0,10.10.23.27] Successful login for locked user 'mozna'
+2025-04-09T05:18:03.006162Z [HoneyPotSSHTransport,0,10.10.23.27] login attempt [b'mozna'/b'esterka'] succeeded
+2025-04-09T05:18:03.007454Z [HoneyPotSSHTransport,0,10.10.23.27] Initialized emulated server as architecture: linux-x64-lsb
+2025-04-09T05:18:03.010857Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'mozna' authenticated with b'password'
+2025-04-09T05:18:03.011330Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-04-09T05:18:03.015712Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-04-09T05:18:03.016240Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-04-09T05:18:03.016349Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-04-09T05:18:03.019027Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,10.10.23.27] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/log.py", line 96, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/log.py", line 80, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/context.py", line 117, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/context.py", line 82, in callWithContext
+	    return func(*args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/conch/ssh/channel.py", line 162, in requestReceived
+	    return f(data)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/conch/ssh/session.py", line 108, in request_pty_req
+	    self.session = ISession(self.avatar)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/components.py", line 105, in _hook
+	    return factory(ob)
+	  File "/home/cowrie/cowrie/src/cowrie/shell/session.py", line 52, in __init__
+	    self.server.initFileSystem(self.avatar.home, self.protocol.realClientIP)
+	builtins.AttributeError: 'NoneType' object has no attribute 'realClientIP'
+	
+2025-04-09T05:18:03.027623Z [twisted.conch.ssh.session#info] Getting shell
+2025-04-09T05:18:03.027791Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,10.10.23.27] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/log.py", line 96, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/log.py", line 80, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/context.py", line 117, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/context.py", line 82, in callWithContext
+	    return func(*args, **kw)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/conch/ssh/channel.py", line 162, in requestReceived
+	    return f(data)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/conch/ssh/session.py", line 80, in request_shell
+	    self.session = ISession(self.avatar)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/python/components.py", line 105, in _hook
+	    return factory(ob)
+	  File "/home/cowrie/cowrie/src/cowrie/shell/session.py", line 52, in __init__
+	    self.server.initFileSystem(self.avatar.home, self.protocol.realClientIP)
+	builtins.AttributeError: 'NoneType' object has no attribute 'realClientIP'
+	
+2025-04-09T05:18:14.557726Z [HoneyPotSSHTransport,0,10.10.23.27] Got remote error, code 11 reason: b'disconnected by user'
+2025-04-09T05:18:14.560576Z [HoneyPotSSHTransport,0,10.10.23.27] avatar mozna logging out
+2025-04-09T05:18:14.560795Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-04-09T05:18:14.561049Z [HoneyPotSSHTransport,0,10.10.23.27] Connection lost after 14.2 seconds
+2025-04-09T05:21:22.494208Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-09T05:21:22.504959Z [-] (TCP Port 23 Closed)
+2025-04-09T05:21:22.506380Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Stopping factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f8ffcc37690>
+2025-04-09T05:21:22.506871Z [-] (TCP Port 22 Closed)
+2025-04-09T05:21:22.507056Z [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f8ffcc37450>
+2025-04-09T05:21:22.508086Z [twisted.internet.base#info] Main loop terminated.
+2025-04-09T05:21:22.509757Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.

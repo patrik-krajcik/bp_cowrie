@@ -1,0 +1,54 @@
+2025-04-07T18:48:57.711382Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-07T18:48:58.477239Z [-] Removing stale pidfile /home/cowrie/cowrie/var/run/cowrie.pid
+2025-04-07T18:48:58.477939Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-07T18:48:58.477984Z [-] Twisted Version 24.11.0
+2025-04-07T18:48:58.477993Z [-] Cowrie Version 2.6.1
+2025-04-07T18:48:58.484955Z [-] Loaded output engine: jsonlog
+2025-04-07T18:48:58.486728Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-07T18:48:58.486843Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-07T18:48:58.519451Z [-] CowrieSSHFactory starting on 22
+2025-04-07T18:48:58.523901Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f84649d87d0>
+2025-04-07T18:48:58.625638Z [-] Ready to accept SSH connections
+2025-04-07T18:48:58.635070Z [-] HoneyPotTelnetFactory starting on 23
+2025-04-07T18:48:58.635486Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f846462b490>
+2025-04-07T18:48:58.638223Z [-] Ready to accept Telnet connections
+2025-04-07T18:51:55.991987Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-07T18:51:55.997749Z [-] (TCP Port 23 Closed)
+2025-04-07T18:51:55.998192Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Stopping factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f846462b490>
+2025-04-07T18:51:55.998440Z [-] (TCP Port 22 Closed)
+2025-04-07T18:51:55.998571Z [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f84649d87d0>
+2025-04-07T18:51:55.998879Z [twisted.internet.base#info] Main loop terminated.
+2025-04-07T18:51:55.999672Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-07T18:57:02.152470Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-07T18:57:02.904485Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-07T18:57:02.904531Z [-] Twisted Version 24.11.0
+2025-04-07T18:57:02.904542Z [-] Cowrie Version 2.6.1
+2025-04-07T18:57:02.909805Z [-] Loaded output engine: jsonlog
+2025-04-07T18:57:02.912261Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-07T18:57:02.912358Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-07T18:57:02.945462Z [-] CowrieSSHFactory starting on 22
+2025-04-07T18:57:02.949310Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f7fd9c43190>
+2025-04-07T18:57:03.051837Z [-] Ready to accept SSH connections
+2025-04-07T18:57:03.060194Z [-] HoneyPotTelnetFactory starting on 23
+2025-04-07T18:57:03.060578Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f7fd9ba64d0>
+2025-04-07T18:57:03.063748Z [-] Ready to accept Telnet connections
+2025-04-07T18:57:44.455138Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-07T18:57:44.456937Z [-] (TCP Port 23 Closed)
+2025-04-07T18:57:44.457309Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Stopping factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f7fd9ba64d0>
+2025-04-07T18:57:44.457523Z [-] (TCP Port 22 Closed)
+2025-04-07T18:57:44.457664Z [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f7fd9c43190>
+2025-04-07T18:57:44.457920Z [twisted.internet.base#info] Main loop terminated.
+2025-04-07T18:57:44.458472Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-07T18:58:11.062211Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-07T18:58:11.263132Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-07T18:58:11.263167Z [-] Twisted Version 24.11.0
+2025-04-07T18:58:11.263176Z [-] Cowrie Version 2.6.1
+2025-04-07T18:58:11.263987Z [-] Loaded output engine: jsonlog
+2025-04-07T18:58:11.265347Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-07T18:58:11.265670Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-07T18:58:11.281250Z [-] CowrieSSHFactory starting on 22
+2025-04-07T18:58:11.282528Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f0cfbd07310>
+2025-04-07T18:58:11.346141Z [-] Ready to accept SSH connections
+2025-04-07T18:58:11.352681Z [-] HoneyPotTelnetFactory starting on 23
+2025-04-07T18:58:11.352998Z [cowrie.telnet.factory.HoneyPotTelnetFactory#info] Starting factory <cowrie.telnet.factory.HoneyPotTelnetFactory object at 0x7f0cfbd07950>
+2025-04-07T18:58:11.353224Z [-] Ready to accept Telnet connections

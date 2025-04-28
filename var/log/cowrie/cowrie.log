@@ -1,0 +1,546 @@
+2025-04-28T10:41:00.199466Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-28T10:41:00.333946Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T10:41:00.335192Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T10:41:00.335961Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T10:41:00.339898Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T10:41:00.340711Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T10:41:00.341908Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T10:41:00.343069Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T10:41:00.343614Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T10:41:00.344138Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T10:41:00.345104Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T10:41:00.345830Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T10:41:00.771312Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T10:41:00.771851Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T10:41:00.772391Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T10:41:00.772719Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T10:41:00.773997Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T10:41:00.774787Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T10:41:00.775705Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T10:41:00.779160Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T10:41:00.787843Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T10:41:00.788827Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T10:41:00.789627Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T10:41:00.791011Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T10:41:00.791593Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T10:41:00.800803Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T10:41:00.801182Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T10:41:00.802080Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T10:41:00.802899Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T10:41:00.803175Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T10:41:00.803875Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T10:41:00.804496Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T10:41:00.804974Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T10:41:00.806514Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T10:41:00.807370Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T10:41:00.807939Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T10:41:00.808860Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T10:41:00.809863Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T10:41:00.810464Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T10:41:00.811573Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T10:41:00.812343Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T10:41:00.826578Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T10:41:00.827214Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T10:41:00.851288Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T10:41:00.851732Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T10:41:00.852496Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T10:41:00.853036Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T10:41:00.854237Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T10:41:00.854670Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T10:41:00.855174Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T10:41:00.856235Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T10:41:00.856602Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T10:41:00.858308Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T10:41:00.878039Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T10:41:00.878132Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T10:41:00.918010Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T10:41:00.960626Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T10:41:00.964144Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T10:41:00.964270Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T10:41:00.964288Z [-] Twisted Version 24.11.0
+2025-04-28T10:41:00.964297Z [-] Cowrie Version 2.6.1
+2025-04-28T10:41:00.967080Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T10:41:00.967410Z [-] Loaded output engine: jsonlog
+2025-04-28T10:41:00.967438Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T10:41:00.967972Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T10:41:00.968052Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T10:41:00.968073Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T10:41:00.968122Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T10:41:00.968223Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T10:41:00.968245Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T10:41:00.968267Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T10:41:00.968285Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T10:41:00.968299Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T10:41:00.968384Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T10:41:00.969821Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T10:41:00.970232Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T10:41:00.983094Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T10:41:00.983326Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T10:41:01.065001Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T10:41:06.160574Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T10:41:06.169759Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T10:41:06.171681Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-28T12:46:12.786519Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-28T12:46:12.938685Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T12:46:12.940294Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T12:46:12.942557Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T12:46:12.945639Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T12:46:12.946465Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T12:46:12.947339Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T12:46:12.948611Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T12:46:12.950555Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T12:46:12.951198Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T12:46:12.951943Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T12:46:12.952441Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T12:46:13.572994Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T12:46:13.574607Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T12:46:13.575186Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T12:46:13.577277Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T12:46:13.578814Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T12:46:13.579533Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T12:46:13.580048Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T12:46:13.583754Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T12:46:13.594541Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T12:46:13.595950Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T12:46:13.596966Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T12:46:13.599187Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T12:46:13.600384Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T12:46:13.608858Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T12:46:13.610558Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T12:46:13.611290Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T12:46:13.612766Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T12:46:13.614948Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T12:46:13.616442Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T12:46:13.618495Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T12:46:13.619287Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T12:46:13.620236Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T12:46:13.622027Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T12:46:13.623476Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T12:46:13.624875Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T12:46:13.626814Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T12:46:13.627710Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T12:46:13.628750Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T12:46:13.629550Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T12:46:13.639618Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T12:46:13.641152Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T12:46:13.664736Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T12:46:13.665253Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T12:46:13.666990Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T12:46:13.668175Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T12:46:13.668836Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T12:46:13.669843Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T12:46:13.670537Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T12:46:13.671565Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T12:46:13.672078Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T12:46:13.673165Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T12:46:13.695791Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T12:46:13.695900Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T12:46:13.748558Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T12:46:13.791424Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T12:46:13.794625Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T12:46:13.794744Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T12:46:13.794767Z [-] Twisted Version 24.11.0
+2025-04-28T12:46:13.794780Z [-] Cowrie Version 2.6.1
+2025-04-28T12:46:13.797576Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T12:46:13.798680Z [-] Loaded output engine: jsonlog
+2025-04-28T12:46:13.798735Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T12:46:13.799460Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T12:46:13.799715Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T12:46:13.799788Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T12:46:13.799895Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T12:46:13.799957Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T12:46:13.799977Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T12:46:13.800009Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T12:46:13.800035Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T12:46:13.800144Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T12:46:13.800192Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T12:46:13.800304Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T12:46:13.800450Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T12:46:13.811530Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T12:46:13.811743Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T12:46:13.907192Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T12:48:10.805934Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T12:48:10.811068Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T12:48:10.812543Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-28T12:55:05.854068Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-28T12:55:05.997148Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T12:55:05.998620Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T12:55:05.999238Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T12:55:06.000781Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T12:55:06.001209Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T12:55:06.001817Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T12:55:06.002855Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T12:55:06.003291Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T12:55:06.003836Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T12:55:06.004190Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T12:55:06.004578Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T12:55:06.355923Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T12:55:06.356339Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T12:55:06.356739Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T12:55:06.357446Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T12:55:06.357960Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T12:55:06.358270Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T12:55:06.358648Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T12:55:06.359663Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T12:55:06.364446Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T12:55:06.365484Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T12:55:06.365973Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T12:55:06.366501Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T12:55:06.366769Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T12:55:06.371132Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T12:55:06.371546Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T12:55:06.371795Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T12:55:06.372277Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T12:55:06.372542Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T12:55:06.372848Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T12:55:06.373575Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T12:55:06.374040Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T12:55:06.374462Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T12:55:06.374785Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T12:55:06.375066Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T12:55:06.375615Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T12:55:06.375882Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T12:55:06.376321Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T12:55:06.376806Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T12:55:06.377112Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T12:55:06.382909Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T12:55:06.383366Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T12:55:06.396279Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T12:55:06.396651Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T12:55:06.396956Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T12:55:06.397216Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T12:55:06.397498Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T12:55:06.398205Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T12:55:06.398588Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T12:55:06.399139Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T12:55:06.399531Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T12:55:06.400335Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T12:55:06.421214Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T12:55:06.421342Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T12:55:06.444561Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T12:55:06.475429Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T12:55:06.477840Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T12:55:06.477992Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T12:55:06.478022Z [-] Twisted Version 24.11.0
+2025-04-28T12:55:06.478039Z [-] Cowrie Version 2.6.1
+2025-04-28T12:55:06.481667Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T12:55:06.482094Z [-] Loaded output engine: jsonlog
+2025-04-28T12:55:06.482150Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T12:55:06.483098Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T12:55:06.483223Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T12:55:06.483267Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T12:55:06.483362Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T12:55:06.483556Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T12:55:06.483599Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T12:55:06.483644Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T12:55:06.483678Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T12:55:06.483704Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T12:55:06.483739Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T12:55:06.483874Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T12:55:06.484058Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T12:55:06.495071Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T12:55:06.495288Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T12:55:06.539438Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T13:08:32.549887Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T13:08:32.553757Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T13:08:32.554843Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-28T13:08:56.020530Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist', '/home/cowrie/cowrie/cowrie.cfg']
+2025-04-28T13:08:56.150699Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T13:08:56.152000Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T13:08:56.152937Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T13:08:56.155402Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T13:08:56.155947Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T13:08:56.156473Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T13:08:56.156853Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T13:08:56.157248Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T13:08:56.158319Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T13:08:56.158974Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T13:08:56.159705Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T13:08:56.556114Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T13:08:56.556657Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T13:08:56.557927Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T13:08:56.558242Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T13:08:56.558604Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T13:08:56.558994Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T13:08:56.559416Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T13:08:56.562090Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T13:08:56.567112Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T13:08:56.567726Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T13:08:56.568189Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T13:08:56.568621Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T13:08:56.568909Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T13:08:56.573020Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T13:08:56.574058Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T13:08:56.574364Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T13:08:56.574938Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T13:08:56.575207Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T13:08:56.575658Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T13:08:56.575999Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T13:08:56.576278Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T13:08:56.576732Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T13:08:56.577125Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T13:08:56.578217Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T13:08:56.579036Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T13:08:56.579397Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T13:08:56.579914Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T13:08:56.580684Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T13:08:56.581723Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T13:08:56.585444Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T13:08:56.586941Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T13:08:56.600127Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T13:08:56.600555Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T13:08:56.600932Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T13:08:56.602027Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T13:08:56.602793Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T13:08:56.603235Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T13:08:56.603644Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T13:08:56.604267Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T13:08:56.604541Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T13:08:56.605629Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T13:08:56.624395Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T13:08:56.624519Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T13:08:56.644487Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T13:08:56.672029Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T13:08:56.673939Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T13:08:56.674051Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T13:08:56.674078Z [-] Twisted Version 24.11.0
+2025-04-28T13:08:56.674093Z [-] Cowrie Version 2.6.1
+2025-04-28T13:08:56.676164Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T13:08:56.676435Z [-] Loaded output engine: jsonlog
+2025-04-28T13:08:56.676472Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T13:08:56.677156Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T13:08:56.677246Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T13:08:56.677281Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T13:08:56.677442Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T13:08:56.677502Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T13:08:56.677530Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T13:08:56.677569Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T13:08:56.677597Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T13:08:56.677619Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T13:08:56.677648Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T13:08:56.677756Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T13:08:56.677913Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T13:08:56.689113Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T13:08:56.689795Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T13:08:56.742852Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T13:12:55.416764Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T13:12:55.424714Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T13:12:55.426291Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-28T13:13:00.207412Z [-] Reading configuration from ['/home/cowrie/cowrie/cowrie.cfg']
+2025-04-28T13:13:00.304402Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T13:13:00.305728Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T13:13:00.306220Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T13:13:00.307457Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T13:13:00.307867Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T13:13:00.308216Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T13:13:00.308526Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T13:13:00.308852Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T13:13:00.309123Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T13:13:00.309477Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T13:13:00.310590Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T13:13:00.624476Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T13:13:00.625777Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T13:13:00.626431Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T13:13:00.627336Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T13:13:00.627778Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T13:13:00.628243Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T13:13:00.628651Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T13:13:00.632103Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T13:13:00.638636Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T13:13:00.639234Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T13:13:00.639741Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T13:13:00.640233Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T13:13:00.640580Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T13:13:00.645260Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T13:13:00.646481Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T13:13:00.646864Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T13:13:00.647345Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T13:13:00.647664Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T13:13:00.648049Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T13:13:00.648441Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T13:13:00.648778Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T13:13:00.649261Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T13:13:00.650658Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T13:13:00.651209Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T13:13:00.651849Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T13:13:00.652181Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T13:13:00.653147Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T13:13:00.654487Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T13:13:00.654879Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T13:13:00.659831Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T13:13:00.660391Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T13:13:00.677002Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T13:13:00.677563Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T13:13:00.678908Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T13:13:00.679300Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T13:13:00.679651Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T13:13:00.679925Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T13:13:00.680532Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T13:13:00.681216Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T13:13:00.682207Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T13:13:00.683065Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T13:13:00.706343Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T13:13:00.706468Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T13:13:00.732363Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T13:13:00.755399Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T13:13:00.756877Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T13:13:00.757492Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T13:13:00.757537Z [-] Twisted Version 24.11.0
+2025-04-28T13:13:00.757555Z [-] Cowrie Version 2.6.1
+2025-04-28T13:13:00.760236Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T13:13:00.762160Z [-] Loaded output engine: jsonlog
+2025-04-28T13:13:00.762247Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T13:13:00.763539Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T13:13:00.763696Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T13:13:00.763740Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T13:13:00.763829Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T13:13:00.763903Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T13:13:00.763929Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T13:13:00.764093Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T13:13:00.764144Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T13:13:00.764171Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T13:13:00.764208Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T13:13:00.764416Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T13:13:00.764606Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T13:13:00.776566Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T13:13:00.777501Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T13:13:00.830432Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T13:13:39.151748Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T13:13:39.159060Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T13:13:39.161277Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2025-04-28T13:13:44.549695Z [-] Reading configuration from ['/home/cowrie/cowrie/etc/cowrie.cfg.dist']
+2025-04-28T13:13:44.636525Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: adduser
+2025-04-28T13:13:44.637909Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: apt
+2025-04-28T13:13:44.638433Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: awk
+2025-04-28T13:13:44.639581Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base
+2025-04-28T13:13:44.639968Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: base64
+2025-04-28T13:13:44.640291Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: bash
+2025-04-28T13:13:44.640581Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: busybox
+2025-04-28T13:13:44.640896Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: cat
+2025-04-28T13:13:44.641275Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chmod
+2025-04-28T13:13:44.642223Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: chpasswd
+2025-04-28T13:13:44.642670Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: crontab
+2025-04-28T13:13:45.035651Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: curl
+2025-04-28T13:13:45.036263Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: dd
+2025-04-28T13:13:45.037033Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: du
+2025-04-28T13:13:45.038550Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: env
+2025-04-28T13:13:45.039216Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ethtool
+2025-04-28T13:13:45.039827Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: finger
+2025-04-28T13:13:45.040496Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: free
+2025-04-28T13:13:45.044422Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: fs
+2025-04-28T13:13:45.051796Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ftpget
+2025-04-28T13:13:45.053214Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: gcc
+2025-04-28T13:13:45.054580Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: groups
+2025-04-28T13:13:45.055156Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ifconfig
+2025-04-28T13:13:45.055482Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ip
+2025-04-28T13:13:45.063038Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: iptables
+2025-04-28T13:13:45.063470Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: last
+2025-04-28T13:13:45.063888Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: locate
+2025-04-28T13:13:45.064504Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ls
+2025-04-28T13:13:45.064830Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: lspci
+2025-04-28T13:13:45.066631Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nc
+2025-04-28T13:13:45.067021Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: netstat
+2025-04-28T13:13:45.067670Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: nohup
+2025-04-28T13:13:45.068552Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: perl
+2025-04-28T13:13:45.069575Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ping
+2025-04-28T13:13:45.071038Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: python
+2025-04-28T13:13:45.071992Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: scp
+2025-04-28T13:13:45.072661Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: service
+2025-04-28T13:13:45.074062Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sleep
+2025-04-28T13:13:45.075452Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ssh
+2025-04-28T13:13:45.076163Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: sudo
+2025-04-28T13:13:45.086495Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tar
+2025-04-28T13:13:45.087257Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tee
+2025-04-28T13:13:45.103561Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: tftp
+2025-04-28T13:13:45.104035Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: ulimit
+2025-04-28T13:13:45.104429Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uname
+2025-04-28T13:13:45.105261Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uniq
+2025-04-28T13:13:45.106915Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: unzip
+2025-04-28T13:13:45.107254Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: uptime
+2025-04-28T13:13:45.107610Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wc
+2025-04-28T13:13:45.108283Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: wget
+2025-04-28T13:13:45.108588Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: which
+2025-04-28T13:13:45.109994Z [cowrie] [DEBUG][protocol.py][HoneyPotBaseProtocol] Successfully loaded command module: yum
+2025-04-28T13:13:45.131137Z [cowrie] [DEBUG][avatar.py] Registering ISFTPServer adapter for CowrieUser
+2025-04-28T13:13:45.131262Z [cowrie] [DEBUG][avatar.py] Registering ISession adapter for CowrieUser
+2025-04-28T13:13:45.158377Z [cowrie] [DEBUG][transport.py][HoneyPotSSHTransport.__init__] Initialized SSH transport instance
+2025-04-28T13:13:45.182918Z [cowrie] [DEBUG][cowrie_plugin.py][CowrieServiceMaker.__init__] Initializing service maker
+2025-04-28T13:13:45.185955Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Starting CowrieServiceMaker.makeService
+2025-04-28T13:13:45.186225Z [-] Python Version 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+2025-04-28T13:13:45.186258Z [-] Twisted Version 24.11.0
+2025-04-28T13:13:45.186275Z [-] Cowrie Version 2.6.1
+2025-04-28T13:13:45.190221Z [cowrie] [DEBUG][jsnlog.py][Output.start] Initializing JSON output plugin
+2025-04-28T13:13:45.190556Z [-] Loaded output engine: jsonlog
+2025-04-28T13:13:45.190598Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Loaded output engine: jsonlog
+2025-04-28T13:13:45.191550Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services
+2025-04-28T13:13:45.191662Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'
+2025-04-28T13:13:45.191699Z [cowrie] [DEBUG][cowrie_plugin.py][makeService] Attached topService to Application
+2025-04-28T13:13:45.191788Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Pool ready  setting up services
+2025-04-28T13:13:45.191837Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Initializing SSH factory
+2025-04-28T13:13:45.191861Z [cowrie] [DEBUG][factory.py][CowrieSSHFactory.__init__] Configuring SSH services: ssh-userauth and ssh-connection
+2025-04-28T13:13:45.191898Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Initialized CowrieSSHFactory with backend and pool handler
+2025-04-28T13:13:45.191926Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created authentication portal with HoneyPotRealm
+2025-04-28T13:13:45.191949Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPublicKeyChecker
+2025-04-28T13:13:45.191977Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Registered HoneypotPasswordChecker
+2025-04-28T13:13:45.192083Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Loaded SSH listen_endpoints from [ssh] section
+2025-04-28T13:13:45.192253Z [cowrie] [DEBUG][cowrie_plugin.py][pool_ready] Created SSH endpoint services and attached them to topService
+2025-04-28T13:13:45.203185Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/cowrie/cowrie/cowrie-env/bin/python3 3.11.2) starting up.
+2025-04-28T13:13:45.203440Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-04-28T13:13:45.239968Z [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/defer.py", line 155, in execute
+	    result = callable(*args, **kwargs)
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/posixbase.py", line 366, in listenTCP
+	    p.startListening()
+	  File "/home/cowrie/cowrie/cowrie-env/lib/python3.11/site-packages/twisted/internet/tcp.py", line 1360, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:22: [Errno 98] Address already in use.
+	
+2025-04-28T13:14:37.507342Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-04-28T13:14:37.514262Z [twisted.internet.base#info] Main loop terminated.
+2025-04-28T13:14:37.516642Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
