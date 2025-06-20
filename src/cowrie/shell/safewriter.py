@@ -25,9 +25,7 @@ class SafeFileWriter:
         return self.file
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        """
-        Unlock and close the file, even if error happens.
-        """
+    
         if self.file:
             try:
                 fcntl.flock(self.file, fcntl.LOCK_UN)

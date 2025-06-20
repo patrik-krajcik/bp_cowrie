@@ -124,7 +124,7 @@ class UserDB:
 
 
 
-class AuthRandom:
+class AuthPerIP:
     """
     Authentication that tracks username/password combos per source IP.
     Each IP can have multiple unlocked combinations.
@@ -144,7 +144,7 @@ class AuthRandom:
             self.maxtry = self.mintry + 1
             log.msg(f"Adjusted maxtry to: {self.maxtry}")
 
-        self.state_file = f"{CowrieConfig.get('honeypot', 'state_path')}/auth_random.json"
+        self.state_file = f"{CowrieConfig.get('honeypot', 'state_path')}/auth_perip.json"
         self.uservar: dict[str, dict] = {}  # { "src_ip": { "combos": {username: password}, "attempts": {username: {"tried": set(), "try": x, "max": y}} } }
         self.load_state()
 
@@ -231,7 +231,7 @@ class AuthRandom:
 
 
 
-class AuthUsernameLock:
+class AuthGlobal:
     """
     Authentication that locks the first successful password per username.
     New usernames require random attempts (between mintry/maxtry) before access.
@@ -256,7 +256,7 @@ class AuthUsernameLock:
             "user_locks": {},   # {"username": "password"}
             "attempts": {}      # {"username": {"tried": [passwords], "try": X, "max": Y}}
         }
-        self.state_file = f"{CowrieConfig.get('honeypot', 'state_path')}/auth_userlock.json"
+        self.state_file = f"{CowrieConfig.get('honeypot', 'state_path')}/auth_global.json"
         self.load_state()
 
     def load_state(self) -> None:

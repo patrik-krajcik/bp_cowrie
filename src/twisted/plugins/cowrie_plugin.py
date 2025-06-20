@@ -81,6 +81,8 @@ def allFailureObserver(event: dict) -> None:
             # if even logging fails, just print it (best effort)
             print(f"Error saving crash to error log: {e}")
 
+
+
 @provider(ILogObserver)
 def importFailureObserver(event: dict) -> None:
     if "failure" in event and event["failure"].type is ImportError:
@@ -197,7 +199,6 @@ Makes a Cowrie SSH/Telnet honeypot.
         log.msg("[DEBUG][cowrie_plugin.py][makeService] Created MultiService container for all Cowrie services", system="cowrie")
 
         application = service.Application("cowrie")
-        log.msg("[DEBUG][cowrie_plugin.py][makeService] Created Twisted Application named 'cowrie'", system="cowrie")
 
         self.topService.setServiceParent(application)
         log.msg("[DEBUG][cowrie_plugin.py][makeService] Attached topService to Application", system="cowrie")

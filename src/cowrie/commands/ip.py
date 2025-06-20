@@ -37,8 +37,7 @@ class Command_ip(HoneyPotCommand):
     inet {ipv4}/24 brd {ipv4_prefix}.255 scope global dynamic eth0
        valid_lft 86399sec preferred_lft 86399sec
     inet6 {ipv6} scope link 
-       valid_lft forever preferred_lft forever
-"""
+       valid_lft forever preferred_lft forever"""
         self.write(f"{result}\n")
 
 # Register commands

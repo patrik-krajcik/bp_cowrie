@@ -55,7 +55,7 @@ class HoneypotPublicKeyChecker:
 
         if not (persistent_global or persistent_perip):
             log.msg("[DEBUG][checkers.py][requestAvatarId] No persistent mode enabled, denying access", system="cowrie")
-            log.msg(
+            log.msg( 
                 eventid="cowrie.login.failed",
                 format="public key login attempt for [%(username)s] failed",
                 username=credentials.username,

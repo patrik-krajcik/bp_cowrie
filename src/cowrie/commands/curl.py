@@ -2,6 +2,7 @@
 # See the COPYRIGHT file for more information
 
 from __future__ import annotations
+from http.client import responses
 
 import getopt
 import os
@@ -12,8 +13,6 @@ from twisted.internet.defer import inlineCallbacks
 from twisted.python import log
 
 import treq
-import random
-import asyncio
 
 from cowrie.core.artifact import Artifact
 from cowrie.core.network import communication_allowed
@@ -193,120 +192,140 @@ class Command_curl(HoneyPotCommand):
     currentlength: int = 0  # partial size during download
     totallength: int = 0  # total length
     silent: bool = False
+    head_request: bool = False
     url: bytes
     host: str
     port: int
 
     @inlineCallbacks
     def start(self):
+        log.msg("start called")
+
         try:
+            log.msg("parsing arguments")
             optlist, args = getopt.getopt(
-                self.args, "sho:O", ["help", "manual", "silent"]
+                self.args, "sho:OI", ["help", "manual", "silent", "head"]
             )
+            log.msg("arguments parsed")
         except getopt.GetoptError as err:
+            log.msg("argument parsing failed")
             self.write(f"curl: {err}\n")
-            self.write("curl: try 'curl --help' or 'curl --manual' for more information\n")
+            self.write(
+                "curl: try 'curl --help' or 'curl --manual' for more information\n"
+            )
             self.exit()
             return
 
         for opt in optlist:
+            log.msg("processing option")
             if opt[0] == "-h" or opt[0] == "--help":
+                log.msg("help requested")
                 self.write(CURL_HELP)
                 self.exit()
                 return
             elif opt[0] == "-s" or opt[0] == "--silent":
+                log.msg("silent enabled")
                 self.silent = True
+            elif opt[0] == "-I" or opt[0] == "--head":
+                log.msg("head enabled")
+                self.head_request = True
 
         if len(args):
             if args[0] is not None:
                 url = str(args[0]).strip()
+                log.msg("url parsed")
         else:
-            self.write("curl: try 'curl --help' or 'curl --manual' for more information\n")
+            log.msg("no url provided")
+            self.write(
+                "curl: try 'curl --help' or 'curl --manual' for more information\n"
+            )
             self.exit()
             return
 
         if "://" not in url:
             url = "http://" + url
+            log.msg("scheme added to url")
         urldata = parse.urlparse(url)
+        log.msg("url parsed into parts")
 
         for opt in optlist:
             if opt[0] == "-o":
+                log.msg("outfile set manually")
                 self.outfile = opt[1]
             if opt[0] == "-O":
+                log.msg("outfile set from url")
                 self.outfile = urldata.path.split("/")[-1]
                 if (
                     self.outfile is None
                     or not len(self.outfile.strip())
                     or not urldata.path.count("/")
                 ):
+                    log.msg("invalid remote filename")
                     self.write("curl: Remote file name has no length!\n")
                     self.exit()
                     return
 
         if self.outfile:
             self.outfile = self.fs.resolve_path(self.outfile, self.protocol.cwd)
+            log.msg("resolved output path")
             if self.outfile:
                 path = os.path.dirname(self.outfile)
-            else:
-                path = None
             if not path or not self.fs.exists(path) or not self.fs.isdir(path):
+                log.msg("invalid output directory")
                 self.write(
                     f"curl: {self.outfile}: Cannot open: No such file or directory\n"
                 )
                 self.exit()
                 return
-
+                
         self.url = url.encode("ascii")
+        log.msg("url encoded")
 
         parsed = parse.urlparse(url)
         if parsed.scheme:
             scheme = parsed.scheme
+            log.msg("scheme verified")
         if scheme != "http" and scheme != "https":
-            self.errorWrite(f'curl: (1) Protocol "{scheme}" not supported or disabled in libcurl\n')
+            log.msg("unsupported scheme")
+            self.errorWrite(
+                f'curl: (1) Protocol "{scheme}" not supported or disabled in libcurl\n'
+            )
             self.exit()
             return
         if parsed.hostname:
             self.host = parsed.hostname
+            log.msg("hostname extracted")
         else:
-            self.errorWrite(f'curl: (1) Protocol "{scheme}" not supported or disabled in libcurl\n')
+            log.msg("no hostname found")
+            self.errorWrite(
+                f'curl: (1) Protocol "{scheme}" not supported or disabled in libcurl\n'
+            )
             self.exit()
-            return
-
         self.port = parsed.port or (443 if scheme == "https" else 80)
+        log.msg("port selected")
 
         allowed = yield communication_allowed(self.host)
         if not allowed:
+            log.msg("access to host not allowed")
             log.msg("Attempt to access blocked network address")
             self.errorWrite(f"curl: (6) Could not resolve host: {self.host}\n")
             self.exit()
             return None
-
-        # Instead of treq real download — simulate success here:
-        if not self.silent:
-            self.write("  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n")
-            self.write("                                 Dload  Upload   Total   Spent    Left  Speed\n")
             
-            total_size = random.randint(400, 1000)  # pretend file size in bytes
-            downloaded = 0
-            last_percent = 0
+        self.artifact = Artifact("curl-download", self.ip)
+        log.msg("artifact created")
 
-            steps = sorted(random.sample(range(5, 95), random.randint(2, 4))) + [100]
-            for percent in steps:
-                # simulate how much was received
-                downloaded = int(total_size * (percent / 100))
-                
-                self.write(f"{percent:3d} {downloaded:<7d}{percent:4d} {downloaded:<7d}    0     0  {random.randint(300,2500):<7d}     0 --:--:-- --:--:-- --:--:-- {random.randint(300,2500):<7d}\n")
-
-
-        self.write(f"Saved to: {self.outfile}\n")
-        self.exit()
-
-
+        self.deferred = self.treqDownload(url)
+        if self.deferred:
+            log.msg("download started")
+            self.deferred.addCallback(self.success)
+            self.deferred.addErrback(self.error)
 
     def treqDownload(self, url):
         """
         Download `url`
         """
+        log.msg("download requested")
         headers = {"User-Agent": ["curl/7.38.0"]}
 
         # TODO: use designated outbound interface
@@ -314,7 +333,12 @@ class Command_curl(HoneyPotCommand):
         # if CowrieConfig.has_option("honeypot", "out_addr"):
         #     out_addr = (CowrieConfig.get("honeypot", "out_addr"), 0)
 
-        deferred = treq.get(url=url, allow_redirects=False, headers=headers, timeout=10)
+        if self.head_request:
+            log.msg("head request issued")
+            deferred = treq.head(url=url, allow_redirects=False, headers=headers, timeout=10)
+        else:
+            log.msg("get request issued")
+            deferred = treq.get(url=url, allow_redirects=False, headers=headers, timeout=10)
         return deferred
 
     def handle_CTRL_C(self) -> None:
@@ -325,9 +349,26 @@ class Command_curl(HoneyPotCommand):
         """
         successful treq get
         """
+        log.msg("success handler called")
         self.totallength = response.length
+        log.msg("response length set")
+
         # TODO possible this is UNKNOWN_LENGTH
+
+        if self.head_request:
+            log.msg("head response mode")
+            reason = responses.get(response.code, "")
+            self.write(f"HTTP/1.1 {response.code} {reason}\n")
+            for key, values in response.headers.getAllRawHeaders():
+                decoded_key = key.decode() if isinstance(key, bytes) else key
+                for value in values:
+                    decoded_value = value.decode() if isinstance(value, bytes) else value
+                    self.write(f"{decoded_key}: {decoded_value}\n")
+            self.exit()
+            return
+
         if self.limit_size > 0 and self.totallength > self.limit_size:
+            log.msg("response exceeds size limit")
             log.msg(
                 f"Not saving URL ({self.url.decode()}) (size: {self.totallength}) exceeds file size limit ({self.limit_size})"
             )
@@ -335,6 +376,7 @@ class Command_curl(HoneyPotCommand):
             return
 
         if self.outfile and not self.silent:
+            log.msg("writing curl-style progress header")
             self.write(
                 "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n"
             )
@@ -342,6 +384,7 @@ class Command_curl(HoneyPotCommand):
                 "                                 Dload  Upload   Total   Spent    Left  Speed\n"
             )
 
+        log.msg("starting body collection")
         deferred = treq.collect(response, self.collect)
         deferred.addCallback(self.collectioncomplete)
         return deferred

@@ -95,6 +95,18 @@ class Output(cowrie.core.output.Output):
         )
         self.agent = client.Agent(reactor)
 
+        fn = CowrieConfig.get("output_jsonlog", "logfile", fallback="cowrie.json")
+        dirs = os.path.dirname(fn)
+        base = os.path.basename(fn)
+
+        # Create VirusTotal-specific filename while keeping original variables unchanged
+        vt_base = base.replace('.json', '.json.virustotal') if '.json' in base else f"{base}.json.virustotal"
+        self.vt_outfile = cowrie.python.logfile.CowrieDailyLogFile(
+            vt_base,  # Uses the modified filename
+            dirs,     # Same directory as main log
+            defaultMode=0o664
+        )
+
     def stop(self) -> None:
         """
         Stop output plugin
@@ -105,33 +117,52 @@ class Output(cowrie.core.output.Output):
             if self.scan_url and "url" in event:
                 log.msg("Checking url scan report at VT")
                 self.scanurl(event)
-            if self._is_new_shasum(event["shasum"]) and self.scan_file:
+            if self._is_new_shasum(event["shasum"], event) and self.scan_file:
+            #if True : 
                 log.msg("Checking file scan report at VT")
                 self.scanfile(event)
 
         elif event["eventid"] == "cowrie.session.file_upload":
-            if self._is_new_shasum(event["shasum"]) and self.scan_file:
+            if self._is_new_shasum(event["shasum"], event) and self.scan_file:
                 log.msg("Checking file scan report at VT")
                 self.scanfile(event)
 
-    def _is_new_shasum(self, shasum):
-        # Get the downloaded file's modification time
-        shasumfile = os.path.join(CowrieConfig.get("honeypot", "download_path"), shasum)
-        file_modification_time = datetime.datetime.fromtimestamp(
-            os.stat(shasumfile).st_mtime
-        )
+    def _is_new_shasum(self, shasum: str, event) -> bool:
+        """
+        Recursively checks if a file with the given shasum exists in the
+        filesystems directory and whether it's new enough to be scanned again.
+        """
+        base_path = os.path.join(CowrieConfig.get("honeypot", "state_path"))
 
-        # Assumptions:
-        # 1. A downloaded file that was already downloaded before is not written instead of the first downloaded file
-        # 2. On that stage of the code, the file that needs to be scanned in VT is supposed to be downloaded already
-        #
-        # Check:
-        # If the file was first downloaded more than a "period of time" (e.g 1 min) ago -
-        # it has been apparently scanned before in VT and therefore is not going to be checked again
-        if file_modification_time < datetime.datetime.now() - TIME_SINCE_FIRST_DOWNLOAD:
-            log.msg(f"File with shasum '{shasum}' was downloaded before")
-            return False
+        for root, dirs, files in os.walk(base_path):
+            if shasum in files:
+                full_path = os.path.join(root, shasum)
+                try:
+                    file_mod_time = datetime.datetime.fromtimestamp(os.stat(full_path).st_mtime)
+                    if file_mod_time < datetime.datetime.now() - TIME_SINCE_FIRST_DOWNLOAD:
+                        log.msg(f"File with shasum '{shasum}' found at '{full_path}' and is older than threshold")
+                        
+                        vt_event = {
+                            "eventid": "cowrie.virustotal.scanfile",
+                            "message": f"VT: File {shasum} already scanned previously (older than threshold)",
+                            "session": event["session"],
+                            "sha256": shasum,
+                            "is_new": "false"
+                        }
+
+                        self.write_to_json(vt_event)
+                        return False
+                    else:
+                        log.msg(f"File with shasum '{shasum}' found at '{full_path}' and is new enough")
+                        return True
+                except Exception as e:
+                    log.err(f"Error checking file time for {full_path}: {e}")
+                    return False
+
+        # If the file wasn't found at all, we assume it's new and should be scanned
+        log.msg(f"File with shasum '{shasum}' not found in any subdirectory of {base_path}")
         return True
+    
 
     def scanfile(self, event):
         """
@@ -140,6 +171,7 @@ class Output(cowrie.core.output.Output):
         """
         vtUrl = f"{VTAPI_URL}file/report".encode()
         headers = http_headers.Headers({"User-Agent": [COWRIE_USER_AGENT]})
+
         fields = {"apikey": self.apiKey, "resource": event["shasum"], "allinfo": 1}
         body = StringProducer(urlencode(fields).encode("utf-8"))
         d = self.agent.request(b"POST", vtUrl, headers, body)
@@ -189,6 +221,16 @@ class Output(cowrie.core.output.Output):
                     is_new="true",
                 )
 
+                vt_event = {
+                    "eventid": "cowrie.virustotal.scanfile",
+                    "session": event["session"],
+                    "sha256": j["resource"],
+                    "is_new": "true",
+                    "message": f"VT: New file {j['resource']}"
+                }
+
+                self.write_to_json(vt_event)
+
                 try:
                     b = os.path.basename(urlparse(event["url"]).path)
                     if b == "":
@@ -223,6 +265,21 @@ class Output(cowrie.core.output.Output):
                     scans=scans_summary,
                     is_new="false",
                 )
+                vt_event = {
+                    "eventid": "cowrie.virustotal.scanfile",
+                    "session": event["session"],
+                    "positives": j["positives"],
+                    "total": j["total"],
+                    "scan_date": j["scan_date"],
+                    "sha256": j["resource"],
+                    "scans": scans_summary,
+                    "is_new": "false",
+                    "message": "VT: Binary file with sha256 {} was found malicious by {} out of {} feeds (scanned on {})".format(
+                        j["resource"], j["positives"], j["total"], j["scan_date"]
+                    )
+                }
+                self.write_to_json(vt_event)
+
                 log.msg("VT: permalink: {}".format(j["permalink"]))
             elif j["response_code"] == -2:
                 log.msg("VT: response=-2: this has been queued for analysis already")
@@ -366,6 +423,17 @@ class Output(cowrie.core.output.Output):
                     url=event["url"],
                     is_new="true",
                 )
+
+                vt_event = {
+                    "eventid": "cowrie.virustotal.scanurl",
+                    "session": event["session"],
+                    "url": event["url"],
+                    "is_new": "true",
+                    "message": f"VT: New URL {event['url']}"
+
+                }
+                self.write_to_json(vt_event)
+
                 return d
             elif j["response_code"] == 1 and "scans" not in j:
                 log.msg(
@@ -392,6 +460,20 @@ class Output(cowrie.core.output.Output):
                     scans=scans_summary,
                     is_new="false",
                 )
+                
+                vt_event = {
+                    "eventid": "cowrie.virustotal.scanurl",
+                    "session": event["session"],
+                    "positives": j["positives"],
+                    "total": j["total"],
+                    "scan_date": j["scan_date"],
+                    "url": j["url"],
+                    "scans": scans_summary,
+                    "is_new": "false",
+                    "message": f"VT: URL {j['url']} was found malicious by {j['positives']} out of {j['total']} feeds (scanned on {j['scan_date']})"
+                }
+                self.write_to_json(vt_event)
+
                 log.msg("VT: permalink: {}".format(j["permalink"]))
             elif j["response_code"] == -2:
                 log.msg("VT: response=-2: this has been queued for analysis already")
@@ -448,6 +530,24 @@ class Output(cowrie.core.output.Output):
         d.addCallback(cbResponse)
         d.addErrback(cbError)
         return d
+    
+
+    def write_to_json(self, event):
+            """Custom JSON writer that handles both regular and VT events"""
+            try:
+                # Clean the event dictionary
+                clean_event = {
+                    k: v for k, v in event.items()
+                    if not k.startswith("log_") and k not in ["time", "system"]
+                }
+                
+                # Write to file
+                json.dump(clean_event, self.vt_outfile, separators=(",", ":"))
+                self.vt_outfile.write("\n")
+                self.vt_outfile.flush()
+            except (TypeError, KeyError) as e:
+                log.err(f"jsonlog: Error writing event: {e}\nEvent: {repr(event)}")
+
 
 
 @implementer(IBodyProducer)
